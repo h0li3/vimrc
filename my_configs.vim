@@ -1,5 +1,4 @@
 set nu
-set paste
 
 set whichwrap=
 
