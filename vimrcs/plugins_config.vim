@@ -6,6 +6,12 @@
 
 
 """"""""""""""""""""""""""""""
+" => Enable native vim packages as described in the README
+""""""""""""""""""""""""""""""
+set packpath+=~/.vim_runtime
+
+
+""""""""""""""""""""""""""""""
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
 let s:vim_runtime = expand('<sfile>:p:h')."/.."
@@ -165,6 +171,7 @@ let g:ale_set_highlights = 0
 " Only run linting when saving the file
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
+let g:ale_virtualtext_cursor = 'disabled'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -186,14 +193,3 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 " Copy the link to the line of a Git repository to the clipboard
 nnoremap <leader>v :.GBrowse!<CR>
 xnoremap <leader>v :GBrowse!<CR>
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => jedi-vim
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:jedi#auto_vim_configuration = 0
-let g:jedi#goto_assignments_command = "<leader>a"
-let g:jedi#usages_command = "<leader>u"
-let g:jedi#completions_command = "<C-Space>"
-let g:jedi#rename_command = "<leader>r"
-let g:jedi#popup_on_dot = 0
